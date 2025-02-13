@@ -1,0 +1,130 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Inter", serif;
+  display: flex;
+  align-items: center;
+  color: hsl(0, 0%, 100%);
+  justify-content: center;
+  background-color: hsl(233, 47%, 7%);
+}
+ul li {
+  list-style-type: none;
+  padding: 0;
+}
+h1 {
+  font-size: max(36px, 25px);
+  margin-bottom: 20px;
+}
+p {
+  color: hsla(0, 0%, 100%, 0.75);
+  font-size: 16px;
+  line-height: 1.5;
+}
+h3 {
+  font-size: 22px;
+}
+span {
+  color: hsl(277, 64%, 61%);
+}
+img {
+  max-width: 100%;
+}
+.none-on-desktop {
+  display: none;
+}
+.flex-items {
+  height: 50%;
+  width: min(900px, 95%);
+  background-color: hsl(244, 38%, 16%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+.flex-1 {
+  width: 50%;
+  height: 100%;
+  padding-top: 7%;
+  padding-bottom: 6%;
+  padding-inline: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.flex-1 ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffffff;
+}
+.flex-2 {
+  width: 50%;
+  height: 100%;
+  border: 1px solid black;
+  position: relative;
+}
+.flex-2::after {
+  content: "";
+  left: 0;
+  top: 0;
+  opacity: 0.55;
+  background-color: hsl(277, 64%, 61%);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 0 10px 10px 0;
+}
+
+.flex-2 .image {
+  height: 100%;
+  width: 100%;
+  border-radius: 0 10px 10px 0;
+}
+
+@media (max-width: 800px) {
+  h1 {
+    font-size: 30px;
+  }
+  p {
+    font-size: 14px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+
+  .flex-items {
+    border-radius: 10px;
+    flex-direction: column-reverse;
+    height: 95%;
+    text-align: center;
+  }
+  .flex-1 {
+    width: 90%;
+    height: 60%;
+    flex-direction: column;
+    align-items: center;
+    padding-inline: 20px;
+  }
+  .flex-1 ul {
+    margin-top: 20px;
+    flex: 1;
+    flex-direction: column;
+  }
+  .flex-2 {
+    width: 100%;
+    height: 40%;
+  }
+
+  .flex-2 .none-on-desktop {
+    display: block;
+  }
+  .flex-2 .none-on-mobile {
+    display: none;
+  }
+}
